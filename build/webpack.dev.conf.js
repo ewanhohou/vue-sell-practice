@@ -10,6 +10,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
+// 導入express
+const express = require('express')
+// 創建express實例
+const app = express()
+// 1、讀取json數據
+var goods = require('../data/01-商品页(点菜).json');
+var ratings = require('../data/02-商品页(评价).json');
+var seller = require('../data/03-商品页(商家).json');
+
+// 2、路由
+//var routes = express.Router();
+
+// 4、中間件
+//app.use('/api',routes);
+
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
@@ -42,6 +57,21 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     quiet: true, // necessary for FriendlyErrorsPlugin
     watchOptions: {
       poll: config.dev.poll,
+    },
+    //3.編寫接口
+    before(app){
+      app.get('/api/goods', (req,res) => {
+        // 返回數據给客户端，返回json數據
+			res.json(goods);
+      }),
+      app.get('/api/ratings', (req,res) => {
+        // 返回数据给客户端，返回json数据
+        res.json(ratings);
+      }),
+      app.get('/api/seller', (req,res) => {
+        // 返回数据给客户端，返回json数据
+        res.json(seller);
+      })
     }
   },
   plugins: [

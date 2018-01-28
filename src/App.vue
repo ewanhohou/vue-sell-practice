@@ -1,27 +1,31 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+
+    <!-- 頭部 -->
+    <Myheader></Myheader>    
+      
+    <!-- 導航 -->
+    <Mynav></Mynav>
+    <!-- 主體內容 -->
+    <div class="content">
+      content
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+
+import Myheader from './components/header/Header';
+import Mynav from './components/nav/nav';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Myheader,Mynav
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>

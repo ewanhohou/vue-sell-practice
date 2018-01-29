@@ -2,7 +2,7 @@
   <div id="app">
 
     <!-- 頭部 -->
-    <Myheader></Myheader>    
+    <Myheader :poiInfo='poiInfo'></Myheader>    
       
     <!-- 導航 -->
     <Mynav></Mynav>
@@ -12,16 +12,40 @@
 </template>
 
 <script>
-
-import Myheader from './components/header/Header';
-import Mynav from './components/nav/nav';
+import Myheader from "./components/header/Header";
+import Mynav from "./components/nav/nav";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Myheader,Mynav
+    Myheader,
+    Mynav
+  },
+  data() {
+    return {
+      //header組件需要的信息
+      poiInfo: {}
+    };
+  },
+  create() {
+    var that = this;
+    //發起異步請求 獲取數據
+    // Make a request for a user with a given ID
+    this.$axios
+      .get("/api/goods")
+      .then(function(response) {
+        // console.log(response);
+        var dataSource = response.data;
+        if(dataSource.code == 0) {
+            that.poiInfo = dataSource.data.poi_info;
+            
+        }
+      })
+      .catch(function(error) {
+        // console.log(error);
+      });
   }
-}
+};
 </script>
 
 <style>

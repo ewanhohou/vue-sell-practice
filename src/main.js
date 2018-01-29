@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router';
+import Axios from 'axios';
+
 
 // 1.導入組件
 import Goods from './components/goods/Goods';
@@ -16,6 +18,9 @@ Vue.config.productionTip = false
 
 // 安裝vue-router
 Vue.use(VueRouter);
+
+//其他組建中使用axios 需要改寫vue的原形屬性
+Vue.prototype.$axios = Axios;
 
 //定義路由
 const routes = [

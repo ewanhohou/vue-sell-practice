@@ -1,0 +1,188 @@
+  .header{
+  height: 169px;
+  padding-top: 20px;
+
+}
+
+.header .top-wrapper{
+  position: relative;
+}
+.header .top-wrapper .back-wrapper{
+  width: 50px;
+  height: 31px;
+  /* background: red; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  line-height: 31px;
+}
+.header .top-wrapper .back-wrapper span{
+  display: inline-block;
+  color: white;
+}
+.header .top-wrapper .search-wrapper{
+  width: 100%;
+  height: 31px;
+  /* background: purple; */
+  padding: 0 104px 0 50px;
+  /* 設置盒子從邊框開始計算 */
+  box-sizing: border-box;
+}
+.header .top-wrapper .search-wrapper .search-icon{
+  width: 28px;
+  height: 31px;
+  background: url(../../../resource/img/titans_h5_search@2x.png) no-repeat 11px center;
+  position: absolute;
+  background-size: 13px 13px;
+}
+
+.header .top-wrapper .search-wrapper .search-bar{
+  width: 100%;
+  height: 31px;
+  border: 0;
+  /* 設置盒子從邊框開始計算 */
+  box-sizing: border-box;
+  background: #cdcdcc;
+  border-radius: 25px;
+  padding-left: 28px;
+  /* 去除選中藍色 */
+  outline: none;
+}
+
+.header .top-wrapper .more-wrapper{
+  /* width: 104px; */
+  width: 65px;
+  /* height: 31px; */
+  height: 24px;
+  /* background: blue; */
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 7px 15px 0 24px;
+}
+
+.header .top-wrapper .more-wrapper .spelling-bt{
+  width: 30px;
+  height: 17px;
+  color: white;
+  line-height: 17px;
+  border: 1px solid white;
+  text-align: center;
+  float: left;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.header .top-wrapper .more-wrapper .more-bt{
+  float: right;
+  width: 20px;
+  height: 24px;
+  margin-left: 13px;
+  margin-top: 6px;
+}
+
+.header .top-wrapper .more-wrapper .more-bt .s-radius{
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+/* 主體內容 */
+.content-wrapper{
+    padding:  17px 10px 11px;
+    height: 50px;
+}
+.content-wrapper .icon{ 
+  background-size: 135% 100%;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  float: left;
+}
+
+.content-wrapper .name{
+  float: left;
+  padding: 18px -5px 0 12px;
+}
+
+.content-wrapper .name h3{
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.content-wrapper .collect {
+  width: 25px;
+  height: 37px;
+  float: right;
+  text-align: center;
+  padding-top: 6px;
+
+}
+
+.content-wrapper .collect img{
+  width: 20px;
+  height: 20px;
+}
+
+.content-wrapper .collect span{
+  margin-top: 7px;
+  color: white;
+  font-size: 11px;
+}
+
+/* 公告內容 */
+.bulletin-wrapper{
+  height: 16px;
+  padding: 0 10px;
+}
+
+.bulletin-wrapper .icon{
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-right: 6px;
+}
+
+.bulletin-wrapper .text{
+  font-size: 11px;
+  color: white;
+  float: left;
+  line-height: 16px;
+}
+
+.bulletin-wrapper .detail{
+  color: white;
+  float: right;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.bulletin-wrapper .detail span{
+  font-size: 16px;
+  line-height: 16px;
+}
+
+
+/* 背景 */
+.header .bg-wrapper{
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  background-size: 100% 135%;
+  background-position: center -12px;
+}
+/* .header .bg-wrapper img{
+  width: 100%;
+  height: 180px;
+} */

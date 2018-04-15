@@ -7,14 +7,15 @@
     <!-- 導航 -->
     <Mynav></Mynav>
     <!-- 主體內容 -->
-    <router-view></router-view>
+    <router-view>
+      
+    </router-view>
   </div>
 </template>
 
 <script>
 import Myheader from "./components/header/Header";
 import Mynav from "./components/nav/nav";
-
 export default {
   name: "App",
   components: {
@@ -27,7 +28,7 @@ export default {
       poiInfo: {}
     };
   },
-  create() {
+  created() {
     var that = this;
     //發起異步請求 獲取數據
     // Make a request for a user with a given ID
@@ -38,7 +39,6 @@ export default {
         var dataSource = response.data;
         if(dataSource.code == 0) {
             that.poiInfo = dataSource.data.poi_info;
-            
         }
       })
       .catch(function(error) {
